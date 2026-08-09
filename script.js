@@ -56,4 +56,14 @@
       this.style.background = '#e8dfd2';
       this.style.minHeight = '120px';
       this.style.display = 'flex';
-      this.
+    });
+      });
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+}
