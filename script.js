@@ -10,13 +10,13 @@
   if (toggle && navLinks) {
     toggle.addEventListener('click', function(e) {
       e.stopPropagation();
-      navLinks.classList.toggle('open');
+      navLinks.classList.toggle('active');
     });
 
     // close menu on any link click (mobile)
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', function() {
-        navLinks.classList.remove('open');
+        navLinks.classList.remove('active');
       });
     });
 
