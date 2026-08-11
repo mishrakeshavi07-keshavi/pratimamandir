@@ -10,13 +10,13 @@
   if (toggle && navLinks) {
     toggle.addEventListener('click', function(e) {
       e.stopPropagation();
-      navLinks.classList.toggle('active');
+      navLinks.classList.toggle('open');
     });
 
     // close menu on any link click (mobile)
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', function() {
-        navLinks.classList.remove('active');
+        navLinks.classList.remove('open');
       });
     });
 
@@ -58,12 +58,6 @@
       this.style.display = 'flex';
     });
       });
+  })();
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
 
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-    });
-}
